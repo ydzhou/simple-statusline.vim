@@ -10,7 +10,7 @@ function! SimStatusline() abort
     else
         let modeSymbol = '🔎'
     endif
-    let statusline = modeSymbol . " %03l,%03v %p%% %<%=%{WebDevIconsGetFileTypeSymbol()}%F%m%r%h%w"
+    let statusline = modeSymbol . " %03l,%03v %p%% %<%=📝 %F%m%r%h%w"
 	return statusline
 endfunction
 
@@ -22,7 +22,7 @@ function! BufferStatusline() abort
     if mode()=='n'
         return '缓冲区 ' . BufferList()
     endif    
-    let statusline = '%03l,%03v %p%% %<%=%{WebDevIconsGetFileTypeSymbol()}%F%m%r%h%w'
+    let statusline = '%03l,%03v %p%% %<%=📝 %F%m%r%h%w'
 	return statusline
 endfunction
 
