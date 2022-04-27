@@ -4,13 +4,13 @@ function! SimStatusline() abort
         return ''
     endif    
     if mode() == 'n'
-        let modeSymbol = '🔏'
+        let modeSymbol = '普通'
     elseif mode() == 'i'
-        let modeSymbol = '🖌'
+        let modeSymbol = '插入'
     else
-        let modeSymbol = '🔎'
+        let modeSymbol = '可视'
     endif
-    let statusline = modeSymbol . " %03l,%03v %p%% %<%=📝 %F%m%r%h%w"
+    let statusline = modeSymbol . " %03l,%03v %p%% %<%=%F%m%r%h%w"
 	return statusline
 endfunction
 
@@ -22,7 +22,7 @@ function! BufferStatusline() abort
     if mode()=='n'
         return '缓冲区 ' . BufferList()
     endif    
-    let statusline = '%03l,%03v %p%% %<%=📝 %F%m%r%h%w'
+    let statusline = '%03l,%03v %p%% %<%=%F%m%r%h%w'
 	return statusline
 endfunction
 
